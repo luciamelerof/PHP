@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva - Formulario</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Reserva</h1>
+    <form action="procesar_reserva.php" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" maxlength="80" required>
+
+        <br>
+
+        <label for="email">Correo: </label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+
+        <label for="numeroAsistentes">Número de asistentes: </label>
+        <input type="number" id="numeroAsistentes" name="numeroAsistentes" min="1" max="20" required>
+
+        <br>
+
+        <label for="fecha">Fecha reserva: </label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <br>
+
+        <label for="actividad">Actividad: </label>
+        <select id="actividad" name="actividad">
+            <option value="visita" selected>Visita</option>
+            <option value="taller">Taller</option>
+            <option value="charla">Charla</option>
+        </select>
+
+        <br>
+
+        <fieldset>
+            <legend>Materiales:</legend>
+            <label><input type="checkbox" name="materiales[]" value="material1"> Material 1</label>
+            <label><input type="checkbox" name="materiales[]" value="material2"> Material 2</label>
+            <label><input type="checkbox" name="materiales[]" value="material3"> Material 3</label>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula - Ejercicio 1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Formulario de matrícula</h1>
+    <form action="procesarMatricula.php" method="post">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" maxlength="80" required>
+
+        <br>
+
+        <label for="correo">Correo: </label>
+        <input type="email" name="correo" required>
+
+        <br>
+
+        <label for="edad">Edad: </label>
+        <input type="text" name="edad" min="16" max="120" required>
+
+        <br>
+
+        <label for="curso">Curso:</label>
+        <select name="curso">
+            <option value="1smr">1º SMR</option>
+            <option value="2smr">2º SMR</option>
+            <option value="1daw">1º DAW</option>
+            <option value="2daw">2º DAW</option>
+        </select>
+
+        <br>
+
+        <input type="checkbox" name="politica" value="si" required>
+        <label for="politica">He leído y acepto la política de privacidad</label>
+
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
