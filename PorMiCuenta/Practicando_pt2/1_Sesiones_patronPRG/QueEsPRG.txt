@@ -1,0 +1,11 @@
+Envía tu contacto.php y pulsa F5. 
+El navegador te pregunta “¿Reenviar formulario?”. 
+Si aceptas, el POST se envía otra vez. 
+Si ese formulario guardara en una base de datos, 
+tendrías dos registros duplicados. 
+Eso en una web real no puede pasar.
+
+La solución: PRG (Post → Redirect → Get)
+Navegador ──POST──▶ contacto.php (valida y guarda)
+          ◀── 302 Location: contacto.php
+Navegador ──GET───▶ contacto.php (muestra el resultado)
